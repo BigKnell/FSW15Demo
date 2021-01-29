@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learnnig Javascript</title>
+    <link rel="stylesheet" href="">
+
+    <style></style>
+</head>
+
+<body onload="showDate">
+    <div id="header">
+        <h1 id="heading">Learnnig Javascript</h1>
+        <p></p>
+    </div>
+    <div class="container">
+        <h1 id="time">
+        </h1>
+        <button onclick="showDate()">Show Date</button>
+        <h1 id="time">
+        </h1>
+        <button onmouseout="clearDate()" onmouseover="showDate()">Show Date</button>
+        <p></p>
+    </div>
+
+    <div>
+        <h1 id="time1"></h1>
+        <h1>
+            <p></p>
+        </h1>
+        <p></p>
+    </div>
+    <div>
+        <h1></h1>
+        <label for="">Background</label>
+        <select name="background" id="background" onchange="changeBackground(this)">
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+        <option value="coral">coral</option>
+    
+    </select>
+
+    </div><br>
+    <script>
+        function showDate() {
+            var time = document.getElementById('time');
+            time.innerHTML = time Date();
+        }
+
+        function clearDate() {
+            var time = document.getElementById('time1');
+            time.innerHTML = innerHTML '';
+        }
+
+        function changeBackground(x) {
+            console.log(x.value);
+            var body = document.getElementById('body');
+            body.style.backgroundColor = x.value;
+        }
+
+        function changeBackground(x) {
+            console.log(x.value);
+            var heading = document.getElementById('heading');
+            heading.style.color = x.value;
+        }
+    </script>
+
+
+</body>
+
+</html>
